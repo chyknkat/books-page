@@ -1,15 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="page" class="full">
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
     	<meta charset="utf-8">
 		<title>Paranormal Book Reviews</title>
-		<link rel="stylesheet" type="text/css" href="styles.css">
-		
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	</head>
 	<body>
+		
+		<div class="container-fluid">
+			
+				
+		
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<h1>Paranormal Book Reviews</h1>
+					</div>
+				</div>
+				
+				<div class="row">
+					<!-- List of books -->
+					<ul ng-controller="BookListController as bookListCtrl" class="list-group col-md-2">
+						<li class="list-item text-center">Book 1</li>
+					</ul>
+					
+					<div class="col-md-10 col-md-offset-2">
+						<img class="img-responsive img-rounded center-block" src="#">
+						<!-- Tabs with book info and reviews -->
+						<p class="text-center">tabs</p>
+					</div>
+				</div>
+					
+			
+			
+		</div>
+		
 		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
-		<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+		<script type="text/javascript" src="app.js"></script>
 	</body>
 </html>
