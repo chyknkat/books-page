@@ -1,0 +1,22 @@
+{
+  "name": "Paranormal Books",
+  "description": "web pag",
+  "main": "index.html",
+  "moduleType": [
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "books"
+  ],
+  "authors": [
+    "Katrina Ortiz"
+  ],
+  "license": "na",
+  "homepage": "na",
+  "dependencies": {
+    "jquery": "^2.2.0",
+    "bootstrap": "^3.3.6",
+    "angular": "^1.5.0"
+  }
+}
