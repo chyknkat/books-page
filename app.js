@@ -1,9 +1,11 @@
 (function(){
 	var app = angular.module('page', []);
 
-	app.controller('BookListController', function(){
+	app.controller('ListController', function(){
+		this.items = books;
 
 	});
+	
 
 	var books = [
 	{
@@ -32,5 +34,5 @@
 		}
 		]
 	}
-	]
+	];
 })();
