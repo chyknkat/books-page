@@ -19,15 +19,15 @@
 			<div class="row">
 				<!-- List of books -->
 				<div ng-controller="ListController as listCtrl">
-					<ul class="list-group col-md-2" >
-						<li ng-repeat="item in pageCtrl.items" class="list-item text-center">{{item.name}}</li>
+					<ul class="list-group col-md-2" id="book-list">
+						<li ng-repeat="item in pageCtrl.items" class="list-item text-center extra-space">{{item.name}}</li>
 					</ul>
 				</div>
 				<!-- Book Display -->
-				<div class="col-md-10 col-md-offset-2" ng-repeat="item in pageCtrl.items">
+				<div class="col-md-10" ng-repeat="item in pageCtrl.items">
 					<img class="img-responsive center-block extra-space"  ng-src="{{item.image}}"/>
 					<!-- Tabs with book info and reviews -->
-					<section class="tab centered-tabs" ng-controller="TabController as tab">
+					<section class="tab centered-tabs extra-space" ng-controller="TabController as tab">
 					    <ul class="nav nav-pills">
 					        <li ng-class="{active: tab.isSet(1)}">
 					            <a href ng-click="tab.setTab(1)">Info</a></li>
