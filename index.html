@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="page" class="full">
+<html ng-app="reviewsPage">
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
     	<meta charset="utf-8">
@@ -9,7 +9,7 @@
 	</head>
 	<body>
 		
-		<div class="container-fluid">
+		<div class="container-fluid" ng-controller="PageController as pageCtrl">
 			<div class="row">
 				<div class="col-md-12 text-center">
 					<h1>Paranormal Book Reviews</h1>
@@ -20,14 +20,35 @@
 				<!-- List of books -->
 				<div ng-controller="ListController as listCtrl">
 					<ul class="list-group col-md-2" >
-						<li ng-repeat="item in listCtrl.items" class="list-item text-center">{{item.name}}</li>
+						<li ng-repeat="item in pageCtrl.items" class="list-item text-center">{{item.name}}</li>
 					</ul>
 				</div>
 				<!-- Book Display -->
-				<div class="col-md-10 col-md-offset-2">
-					<img class="img-responsive img-rounded center-block" src="images/nightcircus.jpg"/>
+				<div class="col-md-10 col-md-offset-2" ng-repeat="item in pageCtrl.items">
+					<img class="img-responsive center-block extra-space"  ng-src="{{item.image}}"/>
 					<!-- Tabs with book info and reviews -->
-					<p class="text-center">tabs</p>
+					<section class="tab centered-tabs" ng-controller="TabController as tab">
+					    <ul class="nav nav-pills">
+					        <li ng-class="{active: tab.isSet(1)}">
+					            <a href ng-click="tab.setTab(1)">Info</a></li>
+					        <li ng-class="{active: tab.isSet(2)}">
+					            <a href ng-click="tab.setTab(2)">Description</a></li>
+					        <li ng-class="{active: tab.isSet(3)}">
+					            <a href ng-click="tab.setTab(3)">Reviews</a></li>
+					    </ul>
+					    <div ng-show="tab.isSet(1)">
+					  		<h4>Info</h4>
+					          	<p>{{item.name}}</p>
+					          	<p>{{item.author}}
+						</div>
+						<div ng-show="tab.isSet(2)">
+					  		<h4>Description</h4>
+					 			<blockquote class="text-left">{{item.description}}</blockquote>
+						</div>
+						<div ng-show="tab.isSet(3)">
+					  		<h4>Reviews</h4>
+						</div>
+					</section>
 				</div>
 			</div>
 					

@@ -1,11 +1,37 @@
 (function(){
-	var app = angular.module('page', []);
+	var app = angular.module('reviewsPage', []);
 
-	app.controller('ListController', function(){
+	app.controller('PageController', function(){
 		this.items = books;
-
 	});
 	
+	app.controller('ListController', function(){
+		this.current = 0;
+		    
+		    this.setCurrent = function(value) {
+		      if (value === null){
+		        this.current = 0;
+		      } else {
+		      this.current = value;
+		        }
+		    };
+	});
+
+	/*app.controller('DisplayController', function(){
+		
+	});*/
+
+	app.controller('TabController', function(){
+	    this.tab = 1;
+	    
+	    this.setTab = function(selectTab){
+	      this.tab = selectTab;
+	    };
+	    
+	    this.isSet = function (selectedTab) {
+	      return this.tab === selectedTab;
+	    };
+	});
 
 	var books = [
 	{

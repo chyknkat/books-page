@@ -1,3 +1,27 @@
 .list-group {
 	list-style: none;
 }
+
+.centered-tabs {
+    text-align: center
+}
+
+.centered-tabs ul.nav-pills {
+    display: inline-block
+}
+
+.centered-tabs li {
+    display: inline
+}
+
+.centered-tabs a {
+    float: left
+}
+
+* html .centered-tabs ul.nav-pills, *+html .centered-tabs ul.nav-pills {
+    display: inline
+}
+
+.extra-space {
+	padding: 40px 0px 40px 0px;
+}
