@@ -38,15 +38,23 @@
 					    </ul>
 					    <div ng-show="tab.isSet(1)">
 					  		<h4>Info</h4>
-					          	<p>{{item.name}}</p>
-					          	<p>{{item.author}}
+					          	<p><strong>{{item.name}}</strong></p>
+					          	<p>- {{item.author}}
 						</div>
 						<div ng-show="tab.isSet(2)">
 					  		<h4>Description</h4>
 					 			<blockquote class="text-left">{{item.description}}</blockquote>
 						</div>
 						<div ng-show="tab.isSet(3)">
-					  		<h4>Reviews</h4>
+							<ul>
+					  			<h4>Reviews</h4>
+					  			<li ng-repeat="review in item.reviews">
+					  				<blockquote class="text-left">
+					  					<strong>{{review.stars}} Stars</strong> {{review.body}}
+					  					<cite>- {{review.reviewer}}</cite>
+					  				</blockquote>
+					  			</li>
+					  		</ul>
 						</div>
 					</section>
 				</div>

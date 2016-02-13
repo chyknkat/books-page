@@ -42,7 +42,7 @@
 		reviews: [
 		{
 			stars: 5,
-			review: "If you like magicians and mystery, this is the book for you!",
+			body: "If you like magicians and mystery, this is the book for you!",
 			reviewer: "Kat"
 		}
 		]
@@ -55,7 +55,7 @@
 		reviews: [
 		{
 			stars: 5,
-			review: "Ghosts, vampires, a clairvoyant protagonist...what's not to like?",
+			body: "Ghosts, vampires, a clairvoyant protagonist...what's not to like?",
 			reviewer: "Kat"
 		}
 		]
