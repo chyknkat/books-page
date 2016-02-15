@@ -3,23 +3,8 @@
 
 	app.controller('PageController', function(){
 		this.items = books;
-	});
-	
-	app.controller('ListController', function(){
-		this.current = 0;
-		    
-		    this.setCurrent = function(value) {
-		      if (value === null){
-		        this.current = 0;
-		      } else {
-		      this.current = value;
-		        }
-		    };
-	});
-
-	/*app.controller('DisplayController', function(){
 		
-	});*/
+	});
 
 	app.controller('TabController', function(){
 	    this.tab = 1;
@@ -33,6 +18,8 @@
 	    };
 	});
 
+	
+
 	var books = [
 	{
 		name: "The Night Circus",
@@ -45,7 +32,8 @@
 			body: "If you like magicians and mystery, this is the book for you!",
 			reviewer: "Kat"
 		}
-		]
+		],
+		hidden: true
 	},
 	{
 		name: "Touch the Dark",
@@ -58,7 +46,8 @@
 			body: "Ghosts, vampires, a clairvoyant protagonist...what's not to like?",
 			reviewer: "Kat"
 		}
-		]
+		],
+		hidden: true
 	}
 	];
 })();

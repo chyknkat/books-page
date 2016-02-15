@@ -18,45 +18,47 @@
 			
 			<div class="row">
 				<!-- List of books -->
-				<div ng-controller="ListController as listCtrl">
+				<div >
 					<ul class="list-group col-md-2" id="book-list">
-						<li ng-repeat="item in pageCtrl.items" class="list-item text-center extra-space">{{item.name}}</li>
+						<li ng-repeat="item in pageCtrl.items" class="list-item text-center extra-space"><p ng-click="item.hidden = !item.hidden">{{item.name}}</p></li>
 					</ul>
 				</div>
 				<!-- Book Display -->
 				<div class="col-md-10" ng-repeat="item in pageCtrl.items">
-					<img class="img-responsive center-block extra-space"  ng-src="{{item.image}}"/>
-					<!-- Tabs with book info and reviews -->
-					<section class="tab centered-tabs extra-space" ng-controller="TabController as tab">
-					    <ul class="nav nav-pills">
-					        <li ng-class="{active: tab.isSet(1)}">
-					            <a href ng-click="tab.setTab(1)">Info</a></li>
-					        <li ng-class="{active: tab.isSet(2)}">
-					            <a href ng-click="tab.setTab(2)">Description</a></li>
-					        <li ng-class="{active: tab.isSet(3)}">
-					            <a href ng-click="tab.setTab(3)">Reviews</a></li>
-					    </ul>
-					    <div ng-show="tab.isSet(1)">
-					  		<h4>Info</h4>
-					          	<p><strong>{{item.name}}</strong></p>
-					          	<p>- {{item.author}}
-						</div>
-						<div ng-show="tab.isSet(2)">
-					  		<h4>Description</h4>
-					 			<blockquote class="text-left">{{item.description}}</blockquote>
-						</div>
-						<div ng-show="tab.isSet(3)">
-							<ul>
-					  			<h4>Reviews</h4>
-					  			<li ng-repeat="review in item.reviews">
-					  				<blockquote class="text-left">
-					  					<strong>{{review.stars}} Stars</strong> {{review.body}}
-					  					<cite>- {{review.reviewer}}</cite>
-					  				</blockquote>
-					  			</li>
-					  		</ul>
-						</div>
-					</section>
+					<div ng-hide="item.hidden">
+						<img class="img-responsive center-block extra-space"  ng-src="{{item.image}}"/>
+						<!-- Tabs with book info and reviews -->
+						<section class="tab centered-tabs extra-space" ng-controller="TabController as tabCtrl">
+						    <ul class="nav nav-pills">
+						        <li ng-class="{active: tabCtrl.isSet(1)}">
+						            <a href ng-click="tabCtrl.setTab(1)">Info</a></li>
+						        <li ng-class="{active: tabCtrl.isSet(2)}">
+						            <a href ng-click="tabCtrl.setTab(2)">Description</a></li>
+						        <li ng-class="{active: tabCtrl.isSet(3)}">
+						            <a href ng-click="tabCtrl.setTab(3)">Reviews</a></li>
+						    </ul>
+						    <div ng-show="tabCtrl.isSet(1)">
+						  		<h4>Info</h4>
+						          	<p><strong>{{item.name}}</strong></p>
+						          	<p>- {{item.author}}
+							</div>
+							<div ng-show="tabCtrl.isSet(2)">
+						  		<h4>Description</h4>
+						 			<blockquote class="text-left">{{item.description}}</blockquote>
+							</div>
+							<div ng-show="tabCtrl.isSet(3)">
+								<ul>
+						  			<h4>Reviews</h4>
+						  			<li ng-repeat="review in item.reviews">
+						  				<blockquote class="text-left">
+						  					<strong>{{review.stars}} Stars</strong> {{review.body}}
+						  					<cite>- {{review.reviewer}}</cite>
+						  				</blockquote>
+						  			</li>
+						  		</ul>
+							</div>
+						</section>
+					</div>
 				</div>
 			</div>
 					
