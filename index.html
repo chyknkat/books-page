@@ -39,7 +39,7 @@
 						    </ul>
 						    <div ng-show="tabCtrl.isSet(1)">
 						  		<h4>Info</h4>
-						          	<p><strong>{{item.name}}</strong></p>
+						          	<h4><strong>{{item.name}}</strong></h4>
 						          	<p>- {{item.author}}
 							</div>
 							<div ng-show="tabCtrl.isSet(2)">
@@ -56,6 +56,25 @@
 						  				</blockquote>
 						  			</li>
 						  		</ul>
+						  		<h4>Add A Review</h4>
+							  		<form name="reviewForm" ng-controller="ReviewController as reviewCtrl" ng-submit="reviewForm.$valid && reviewCtrl.addReview(item)" novalidate>
+							  			<blockquote>
+							  				<strong>{{reviewCtrl.review.stars}} Stars</strong> {{reviewCtrl.review.body}}
+						  					<cite>- {{reviewCtrl.review.reviewer}}</cite>
+							  			</blockquote>
+							  			<select ng-model="reviewCtrl.review.stars" required>
+							  				<option value="" disabled selected>Rating</option>
+							  				<option value="1">1 Star</option>
+							  				<option value="2">2 Stars</option>
+							  				<option value="3">3 Stars</option>
+							  				<option value="4">4 Stars</option>
+							  				<option value="5">5 Stars</option>
+							  			</select>
+							  			<textarea placeholder="Write a review of the book" ng-model="reviewCtrl.review.body" required></textarea>
+							  			<label>by:</label>
+							  			<input placeholder="Name" ng-model="reviewCtrl.review.reviewer" type="text" required/>
+							  			<input type="submit" value="Submit"/>
+							  		</form>
 							</div>
 						</section>
 					</div>

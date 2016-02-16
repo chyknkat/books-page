@@ -15,7 +15,7 @@
 		};
 	});
 
-	app.controller('TabController', function(){
+	app.controller('TabController', function() {
 	    this.tab = 1;
 	    
 	    this.setTab = function(selectTab){
@@ -27,6 +27,13 @@
 	    };
 	});
 
+	app.controller('ReviewController', function() {
+	    this.review = {};
+	    this.addReview = function(item) {
+	    	item.reviews.push(this.review);
+	    	this.review = {};
+	    };
+	});
 	
 
 	var books = [
