@@ -2,8 +2,17 @@
 	var app = angular.module('reviewsPage', []);
 
 	app.controller('PageController', function(){
+		var self = this;
 		this.items = books;
-		
+		this.show = function(item){
+			item.hidden = !item.hidden;
+			for (var i = 0; i < self.items.length; i++) {
+			    var currentItem = self.items[i];
+			    if (currentItem != item) {
+			            currentItem.hidden = true;
+			    }; 
+			};
+		};
 	});
 
 	app.controller('TabController', function(){

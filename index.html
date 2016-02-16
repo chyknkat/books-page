@@ -18,15 +18,15 @@
 			
 			<div class="row">
 				<!-- List of books -->
-				<div >
+				<div>
 					<ul class="list-group col-md-2" id="book-list">
-						<li ng-repeat="item in pageCtrl.items" class="list-item text-center extra-space"><p ng-click="item.hidden = !item.hidden">{{item.name}}</p></li>
+						<li ng-repeat="item in pageCtrl.items" class="list-item text-center extra-space"><p ng-click="pageCtrl.show(item)">{{item.name}}</p></li>
 					</ul>
 				</div>
 				<!-- Book Display -->
 				<div class="col-md-10" ng-repeat="item in pageCtrl.items">
 					<div ng-hide="item.hidden">
-						<img class="img-responsive center-block extra-space"  ng-src="{{item.image}}"/>
+						<img class="img-responsive center-block extra-space"  alt="book image" ng-src="{{item.image}}"/>
 						<!-- Tabs with book info and reviews -->
 						<section class="tab centered-tabs extra-space" ng-controller="TabController as tabCtrl">
 						    <ul class="nav nav-pills">
