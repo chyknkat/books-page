@@ -11,7 +11,7 @@
 		
 		<div class="container-fluid" ng-controller="PageController as pageCtrl">
 			<div class="row">
-				<div class="col-md-12 text-center">
+				<div class="col-md-12 text-center title">
 					<h1>Paranormal Book Reviews</h1>
 				</div>
 			</div>
@@ -24,7 +24,7 @@
 					</ul>
 				</div>
 				<!-- Book Display -->
-				<div class="col-md-10" ng-repeat="item in pageCtrl.items">
+				<div class="col-md-9" ng-repeat="item in pageCtrl.items">
 					<div ng-hide="item.hidden">
 						<img class="img-responsive center-block extra-space"  alt="book image" ng-src="{{item.image}}"/>
 						<!-- Tabs with book info and reviews -->
@@ -44,7 +44,7 @@
 							</div>
 							<div ng-show="tabCtrl.isSet(2)">
 						  		<h4>Description</h4>
-						 			<p class="text-left" id="description">{{item.description}}</p>
+						 			<p class="text-justify" id="description">{{item.description}}</p>
 							</div>
 							<div ng-show="tabCtrl.isSet(3)">
 								<ul>

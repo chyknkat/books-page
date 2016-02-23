@@ -22,14 +22,24 @@
     display: inline
 }
 
+.title {
+	background-color: #660000;
+	color: white;
+}
+
 .extra-space {
 	padding: 40px 0px 0px 0px;
+}
+
+.text-justify {
+	text-align: justify;
 }
 
 #book-list {
 	background-color: black;
 	color: white;
 	padding-bottom: 40px;
+	font-size: 20px;
 }
 
 #description {
