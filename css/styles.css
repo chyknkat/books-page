@@ -26,16 +26,41 @@
 	padding: 40px 0px 0px 0px;
 }
 
-.ng-invalid.ng-dirty {
-	border-color: red;
-}
-
-.ng-valid.ng-dirty {
-	border-color: green;
-}
-
 #book-list {
 	background-color: black;
 	color: white;
 	padding-bottom: 40px;
+}
+
+#description {
+	font-size: 16px;
+}
+
+#review-list {
+	font-size: 16px;
+}
+
+#rating-select {
+	border-radius: 5px;
+	width: 300px;
+	font-size: 16px;
+}
+
+#review-area {
+	border-radius: 5px;
+	width: 300px;
+	font-size: 16px;
+	border-color: gray;
+}
+
+#reviewer-name {
+	border-radius: 5px;
+	width: 300px;
+	font-size: 16px;
+}
+
+#submit-btn {
+	border-radius: 5px;
+	background-color: #009933;
+	color: white;
 }

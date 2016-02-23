@@ -49,7 +49,7 @@
 			reviewer: "Kat"
 		}
 		],
-		hidden: true
+		hidden: false
 	},
 	{
 		name: "Touch the Dark",
