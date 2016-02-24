@@ -24,7 +24,7 @@
 					</ul>
 				</div>
 				<!-- Book Display -->
-				<div class="col-md-9" ng-repeat="item in pageCtrl.items">
+				<div id="book-display" class="col-md-10" ng-repeat="item in pageCtrl.items">
 					<div ng-hide="item.hidden">
 						<img class="img-responsive center-block extra-space"  alt="book image" ng-src="{{item.image}}"/>
 						<!-- Tabs with book info and reviews -->
@@ -37,16 +37,16 @@
 						        <li ng-class="{active: tabCtrl.isSet(3)}">
 						            <a href ng-click="tabCtrl.setTab(3)">Reviews</a></li>
 						    </ul>
-						    <div ng-show="tabCtrl.isSet(1)">
+						    <div id="info-tab" ng-show="tabCtrl.isSet(1)">
 						  		<h4>Info</h4>
 						          	<h4><strong>{{item.name}}</strong></h4>
 						          	<p>- {{item.author}}
 							</div>
-							<div ng-show="tabCtrl.isSet(2)">
+							<div id="description-tab" ng-show="tabCtrl.isSet(2)">
 						  		<h4>Description</h4>
 						 			<p class="text-justify" id="description">{{item.description}}</p>
 							</div>
-							<div ng-show="tabCtrl.isSet(3)">
+							<div id="reviews-tab"ng-show="tabCtrl.isSet(3)">
 								<ul>
 						  			<h4>Reviews</h4>
 						  			<li ng-repeat="review in item.reviews">

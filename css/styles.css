@@ -40,20 +40,41 @@
 	color: white;
 	padding-bottom: 40px;
 	font-size: 20px;
+	height: 100%;
+}
+
+#book-display {
+	background-image: url("forest.jpg");
+	background-color: black;
+}
+
+#info-tab {
+	color: white;
+}
+
+#description-tab {
+	color: white;
+}
+
+#reviews-tab {
+	color: white;
 }
 
 #description {
 	font-size: 16px;
+	color: white;
 }
 
 #review-list {
 	font-size: 16px;
+	color: white;
 }
 
 #rating-select {
 	border-radius: 5px;
 	width: 300px;
 	font-size: 16px;
+	color: black;
 }
 
 #review-area {
@@ -61,12 +82,14 @@
 	width: 300px;
 	font-size: 16px;
 	border-color: gray;
+	color: black;
 }
 
 #reviewer-name {
 	border-radius: 5px;
 	width: 300px;
 	font-size: 16px;
+	color: black;
 }
 
 #submit-btn {
