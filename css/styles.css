@@ -51,6 +51,7 @@
 	background-image: url("forest.jpg");
 	background-repeat: no-repeat;
 	background-color: #06031d;
+	background-size: cover;
 }
 
 #info-tab {
