@@ -1,5 +1,8 @@
-.row {
-	background-color: black;
+body {
+	background-image: url("forest.jpg");
+	background-repeat: no-repeat;
+	background-color: #06031d;
+	background-size: cover;
 }
 
 .list-group {
@@ -27,7 +30,7 @@
 }
 
 .title {
-	background-color: #660000;
+	background-color: rgba(102, 0, 0, 0.6);
 	color: white;
 }
 
@@ -40,19 +43,16 @@
 }
 
 #book-list {
-	background-color: black;
+	background-color: rgba(0, 0, 0, 0.6);
 	color: white;
 	padding-bottom: 40px;
 	font-size: 20px;
 	height: 100%;
+	cursor: pointer;
+
 }
 
-#book-display {
-	background-image: url("forest.jpg");
-	background-repeat: no-repeat;
-	background-color: #06031d;
-	background-size: cover;
-}
+
 
 #info-tab {
 	color: white;
