@@ -49,9 +49,9 @@
 						  		<h4>Description</h4>
 						 			<p class="text-justify" id="description">{{item.description}}</p>
 							</div>
-							<div id="reviews-tab"ng-show="tabCtrl.isSet(3)">
-								<ul>
-						  			<h4>Reviews</h4>
+							<div id="reviews-tab" ng-show="tabCtrl.isSet(3)">
+								<h4>Reviews</h4>
+								<ul>	
 						  			<li ng-repeat="review in item.reviews">
 						  				<p class="text-left" id="review-list">
 						  					<strong>{{review.stars}} Stars</strong> {{review.body}}
